@@ -1,0 +1,26 @@
+{
+  "name": "letscamp",
+  "version": "1.0.0",
+  "description": "A Camping Site",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "camp",
+    "camping",
+    "grounds"
+  ],
+  "author": "Mohan Vaddi",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

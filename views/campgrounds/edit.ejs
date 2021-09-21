@@ -1,0 +1,37 @@
+<% layout('/campgrounds/layouts/boilerplate.ejs') %>
+<div class="row">
+    <h3 class="text-center">Edit CAMPGROUND</h3>
+    <div class="col-lg-6 offset-lg-3 col-md-12 ">
+        <form method="POST" action="/campgrounds/<%= camp._id %>?_method=PATCH">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title : </label>
+                <input class="form-control" type="text" name="title" id="title" value="<%= camp.title %>"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location : </label>
+                <input class="form-control" type="text" name="location" id="location" value="<%= camp.location%>"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image Url : </label>
+                <input class="form-control" type="text" name="image" id="image" value="<%= camp.image%>"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Price : </label>
+                <div class="input-group">
+                    <span class="input-group-text">₹</span>
+                    <input type="number" id="price" name="price" class="form-control" placeholder="Price" value="<%= camp.price%>">
+                  </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description" >Description : </label>
+                <textarea class="form-control" id="description" type="text" name="description"><%= camp.description%></textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-sm btn-info" type="submit">Update Campground</button>
+                <a class="btn btn-sm btn-dark float-end" href="/campgrounds/<%= camp._id %>">Back to Campground</a>
+            </div>
+            
+        </form>
+
+    </div>
+</div>
